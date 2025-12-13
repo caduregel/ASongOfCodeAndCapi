@@ -24,10 +24,13 @@ function PublicNav() {
     >
       <div className="hidden md:flex gap-5 items-center">
         <Button variant="ghost" asChild className="text-md">
-          <Link to="/">Houses of westeros</Link>
+          <Link to="/westeros">Westeros</Link>
         </Button>
         <Button variant="ghost" asChild className="text-md">
-          <Link to="/characters">Characters</Link>
+          <Link to="/">All</Link>
+        </Button>
+        <Button variant="ghost" asChild className="text-md">
+          <Link to="/essos">essos</Link>
         </Button>
       </div>
       <div className="flex justify-between items-center w-full md:hidden">
