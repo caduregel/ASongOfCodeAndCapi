@@ -1,11 +1,10 @@
 import { Link } from "react-router";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ModeToggle } from "./ui/modeToggle";
 
 function PublicNav() {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,57 +21,15 @@ function PublicNav() {
         scrolled && "shadow-md"
       }`}
     >
-      <div className="hidden md:flex gap-5 items-center">
+      <div className="flex gap-5 items-center">
         <Button variant="ghost" asChild className="text-md">
-          <Link to="/westeros">Westeros</Link>
+          <Link to="/">Houses</Link>
         </Button>
         <Button variant="ghost" asChild className="text-md">
-          <Link to="/">All</Link>
+          <Link to="/characters">Characters</Link>
         </Button>
-        <Button variant="ghost" asChild className="text-md">
-          <Link to="/essos">essos</Link>
-        </Button>
+        <ModeToggle />
       </div>
-      <div className="flex justify-between items-center w-full md:hidden">
-        <div className="flex items-center gap-3">
-          {open ? (
-            <>
-              <X
-                onClick={() => {
-                  setOpen(false);
-                }}
-                className="hover:cursor-pointer"
-              />
-            </>
-          ) : (
-            <Menu
-              className="hover:cursor-pointer"
-              onClick={() => {
-                setOpen(true);
-              }}
-            />
-          )}
-        </div>
-      </div>
-      {open && (
-        <div className="md:hidden flex flex-col gap-2 p-2">
-          <Button variant="ghost" asChild className="text-md">
-            <Link to="/">home</Link>
-          </Button>
-          <Button variant="ghost" asChild className="text-md">
-            <Link to="/about">about</Link>
-          </Button>
-          <Button variant="ghost" asChild className="text-md">
-            <Link to="/pricing">pricing</Link>
-          </Button>
-          <Button variant="ghost" asChild className="text-md">
-            <Link to="/login">Log in</Link>
-          </Button>
-          <Button asChild className="text-md">
-            <Link to="/signup">Try for free</Link>
-          </Button>
-        </div>
-      )}
     </nav>
   );
 }
