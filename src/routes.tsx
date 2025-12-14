@@ -1,6 +1,7 @@
 import App from "./App";
 import CharactersPage from "./pages/CharactersPage";
 import ErrorPage from "./pages/ErrorPage";
+import HousePage from "./pages/HousePage";
 import LandingPage from "./pages/LandingPage";
 
 const routes = [
@@ -10,6 +11,7 @@ const routes = [
     children: [
       { path: "", element: <LandingPage /> },
       { path: "characters", element: <CharactersPage /> },
+      {path: "house/:id", element: <HousePage /> }
     ],
     errorElement: <ErrorPage />,
   },

@@ -17,17 +17,17 @@ function PublicNav() {
 
   return (
     <nav
-      className={`sticky duration-700 transition-all bg-background top-0 z-50 px-4 py-2 flex gap-2 flex-col items-center md:flex-row md:justify-center ${
+      className={`sticky duration-700 transition-all bg-background top-0 z-50 px-4 py-2 flex gap-2 items-center ${
         scrolled && "shadow-md"
       }`}
     >
-      <div className="flex gap-5 items-center">
-        <Button variant="ghost" asChild className="text-md">
-          <Link to="/">Houses</Link>
-        </Button>
-        <Button variant="ghost" asChild className="text-md">
-          <Link to="/characters">Characters</Link>
-        </Button>
+      <Button variant="ghost" asChild className="text-md">
+        <Link to="/">Houses</Link>
+      </Button>
+      <Button variant="ghost" asChild className="text-md">
+        <Link to="/characters">Characters</Link>
+      </Button>
+      <div className="ml-auto">
         <ModeToggle />
       </div>
     </nav>
