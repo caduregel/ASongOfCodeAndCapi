@@ -50,7 +50,7 @@ function LandingPage() {
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {data?.map((item: HouseInterface) => (
-                  <HouseCard key={item.url} {...item} />
+                  <HouseCard key={item.url} house={item} />
                 ))}
               </div>
               {isPageLoading && (
