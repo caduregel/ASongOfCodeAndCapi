@@ -19,15 +19,8 @@ function LandingPage() {
 
   const isPageLoading = !data || isValidating;
 
-  const handleNext = async () => {
-    // Scroll to a specific position
-    window.scrollTo({
-      top: 0, // vertical position in px
-      left: 0, // horizontal position
-      behavior: "smooth", // 'auto' or 'smooth'
-    });
-    setPage((prev) => prev + 1);
-  };
+  const handleNext = async () => setPage((prev) => prev + 1);
+
   const handlePrev = () => setPage((prev) => Math.max(prev - 1, 1));
 
   return (
