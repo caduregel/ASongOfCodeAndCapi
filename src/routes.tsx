@@ -11,7 +11,7 @@ const routes = [
     children: [
       { path: "", element: <LandingPage /> },
       { path: "characters", element: <CharactersPage /> },
-      {path: "house/:id", element: <HousePage /> }
+      {path: "house/:houseid", element: <HousePage /> }
     ],
     errorElement: <ErrorPage />,
   },

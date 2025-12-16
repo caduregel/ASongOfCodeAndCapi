@@ -8,7 +8,7 @@ type HouseCardProps = {
 
 function HouseCard({ house }: HouseCardProps) {
   const houseId = house.url.split("/").pop();
-  console.log(house);
+  
   return (
     <a
       href={`/house/${houseId}`}
