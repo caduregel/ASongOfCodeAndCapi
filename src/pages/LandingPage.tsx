@@ -1,18 +1,22 @@
 import HouseCard from "@/components/HouseCard";
+import HousesFilterCard from "@/components/HousesFilterCard";
 import HousesSkeleton from "@/components/skeletonLayouts/HousesSkeleton";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { IHouse } from "@/interfaces/HouseInterface";
+import type { HousesFilterValues, IHouse } from "@/interfaces/HouseInterface";
 import { fetcher } from "@/lib/swrFetcher";
+import { buildQueryString } from "@/lib/utils";
 import { useState } from "react";
 import useSWR from "swr";
 
 function LandingPage() {
   const [page, setPage] = useState(1);
+  const [filters, setFilters] = useState<HousesFilterValues>({});
   const pageSize = 15;
 
+  const query = buildQueryString(filters, page, pageSize);
+
   const { data, error, isLoading, isValidating } = useSWR(
-    `https://www.anapioficeandfire.com/api/houses?page=${page}&pageSize=${pageSize}`,
+    `https://www.anapioficeandfire.com/api/houses?${query}`,
     fetcher,
     { revalidateOnFocus: false }
   );
@@ -22,18 +26,16 @@ function LandingPage() {
   const handleNext = async () => setPage((prev) => prev + 1);
 
   const handlePrev = () => setPage((prev) => Math.max(prev - 1, 1));
-
+  console.log(query);
   return (
     <>
       <div className="grid grid-cols-4 w-full gap-5 ">
-        <Card className="w-full max-w-sm col-start-1 col-end-2 h-fit">
-          <CardHeader>
-            <CardTitle>Filter through houses</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Filter options here</p>
-          </CardContent>
-        </Card>
+        <HousesFilterCard
+          onApply={(newFilters) => {
+            setPage(1); // Reset to first page on filter change
+            setFilters(newFilters);
+          }}
+        />
         <div className="col-start-2 col-end-5">
           {error ? (
             <div>Error loading data</div>

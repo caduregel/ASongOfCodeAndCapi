@@ -16,3 +16,14 @@ export interface IHouse {
     cadetBranches: string[];
     swornMembers: string[];
 }
+
+export interface HousesFilterValues {
+  name?: string;
+  region?: string;
+  words?: string;
+  hasWords?: boolean;
+  hasTitles?: boolean;
+  hasSeats?: boolean;
+  hasDiedOut?: boolean;
+  hasAncestralWeapons?: boolean;
+}
