@@ -19,11 +19,12 @@ function CharacterPage() {
   );
 
   if (isLoading) return <div className="p-6">Loading...</div>;
-  if (error || !character) return <div className="p-6">Failed to load character</div>;
+  if (error || !character)
+    return <div className="p-6">Failed to load character</div>;
 
   const isDead = Boolean(character.died);
-
-  console.log(character);
+  const displayName =
+    character.name || character.aliases?.[0] || "Unknown character";
 
   return (
     <div className="max-w-5xl mx-auto p-6 space-y-6">
@@ -31,7 +32,7 @@ function CharacterPage() {
       <Card>
         <CardHeader>
           <CardTitle className="text-3xl">
-            {character.name || "Unknown Character"}
+            {displayName}
           </CardTitle>
 
           <div className="flex gap-2 mt-2">

@@ -3,7 +3,6 @@ import { getIdFromUrl } from "@/lib/utils";
 // import { getIdFromUrl } from "@/lib/utils";
 import useSWR from "swr";
 
-
 // A component for displaying a character's name, optionally as a link to their detail page
 // Used for components that display lists of characters, but only have access to the character API URL
 type CharacterNameProps = {
@@ -20,12 +19,15 @@ function CharacterName({ link, isLink = true }: CharacterNameProps) {
   if (isLoading) return <span>Loading...</span>;
   if (error) return <span>Error getting character</span>;
 
+  const displayName =
+    character.name || character.aliases?.[0] || "Unknown character";
+
   if (isLink === false) {
-    return <span>{character.name || `unnamed character #${characterId}`}</span>;
+    return <span>{displayName}</span>;
   }
   return (
     <a href={`/character/${characterId}`} className="underline">
-      {character.name || `unnamed character #${characterId}`}
+      {displayName}
     </a>
   );
 }
