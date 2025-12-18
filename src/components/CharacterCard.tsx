@@ -1,47 +1,53 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import type { ICharacter } from "@/interfaces/CharacterInterface";
+import { getIdFromUrl } from "@/lib/utils";
 
-interface CharacterCardProps {
+interface Props {
   character: ICharacter;
 }
 
-function CharacterCard({ character }: CharacterCardProps) {
-  const isDead = Boolean(character.died);
+function CharacterCard({ character }: Props) {
+  const displayName =
+    character.name || character.aliases?.[0] || "Unknown character";
+
+  const characterId = getIdFromUrl(character.url);
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{character.name || "Unknown Character"}</CardTitle>
-
-        <div className="flex gap-2 mt-2">
-          {character.gender && (
-            <Badge variant="secondary">{character.gender}</Badge>
+    <a
+      href={`/character/${characterId}`}
+      className="hover:scale-[1.05] transition-transform"
+    >
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">{displayName}</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-1 text-sm">
+          {character.culture && (
+            <p>
+              <strong>Culture:</strong> {character.culture}
+            </p>
           )}
-          {isDead && <Badge variant="destructive">Deceased</Badge>}
-        </div>
-      </CardHeader>
 
-      <CardContent className="space-y-2 text-sm">
-        {character.culture && (
-          <p>
-            <b>Culture:</b> {character.culture}
-          </p>
-        )}
+          {character.born && (
+            <p>
+              <strong>Born:</strong> {character.born}
+            </p>
+          )}
 
-        {character.titles?.length > 0 && (
-          <p>
-            <b>Titles:</b> {character.titles.join(", ")}
-          </p>
-        )}
+          {character.died && (
+            <p>
+              <strong>Died:</strong> {character.died}
+            </p>
+          )}
 
-        {character.allegiances?.length > 0 && (
-          <p className="text-muted-foreground">
-            Allegiances: {character.allegiances.length}
-          </p>
-        )}
-      </CardContent>
-    </Card>
+          {character.titles?.length > 0 && character.titles[0] !== "" && (
+            <p>
+              <strong>Titles:</strong> {character.titles.join(", ")}
+            </p>
+          )}
+        </CardContent>
+      </Card>
+    </a>
   );
 }
 
