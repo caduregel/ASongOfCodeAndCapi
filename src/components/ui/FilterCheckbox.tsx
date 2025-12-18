@@ -1,5 +1,5 @@
-import { Checkbox } from "@radix-ui/react-checkbox";
-import { Label } from "@radix-ui/react-dropdown-menu";
+import { Checkbox } from "./checkbox";
+import { Label } from "./label";
 
 function FilterCheckbox({
   label,
@@ -17,7 +17,7 @@ function FilterCheckbox({
         checked={checked}
         onCheckedChange={(v) => onCheckedChange(v === true)}
       />
-      <Label htmlFor={label} className="text-sm">
+      <Label  className="text-sm">
         {label}
       </Label>
     </div>

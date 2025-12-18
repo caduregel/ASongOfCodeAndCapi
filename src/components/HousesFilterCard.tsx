@@ -1,6 +1,12 @@
 // components/HousesFilterCard.tsx
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 // import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
@@ -12,17 +18,6 @@ import FilterCheckbox from "./ui/FilterCheckbox";
 interface Props {
   onApply: (filters: HousesFilterValues) => void;
 }
-
-// const defaultFilters: HousesFilterValues = {
-//   name: "",
-//   region: "",
-//   words: "",
-//   hasWords: false,
-//   hasTitles: false,
-//   hasSeats: false,
-//   hasDiedOut: false,
-//   hasAncestralWeapons: false,
-// };
 
 function HousesFilterCard({ onApply }: Props) {
   const [filters, setFilters] = useState<HousesFilterValues>({});
@@ -48,12 +43,15 @@ function HousesFilterCard({ onApply }: Props) {
     <Card className="w-full max-w-sm h-fit">
       <CardHeader>
         <CardTitle>Filter through houses</CardTitle>
+        <CardDescription className="text-xs text-muted-foreground">
+            Text filters are case-sensitive. Must match the house name exactly.
+        </CardDescription>
       </CardHeader>
 
       <CardContent className="space-y-4">
         {/* Text filters */}
         <div className="space-y-1">
-          <Label htmlFor="name">House name (Name has to be exact)</Label>
+          <Label htmlFor="name">House name</Label>
           <Input
             id="name"
             value={filters.name}
@@ -99,11 +97,7 @@ function HousesFilterCard({ onApply }: Props) {
             checked={filters.hasSeats}
             onCheckedChange={(v) => updateFilter("hasSeats", v)}
           />
-          <FilterCheckbox
-            label="Has died out"
-            checked={filters.hasDiedOut}
-            onCheckedChange={(v) => updateFilter("hasDiedOut", v)}
-          />
+
           <FilterCheckbox
             label="Has ancestral weapons"
             checked={filters.hasAncestralWeapons}
