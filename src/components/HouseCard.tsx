@@ -1,5 +1,6 @@
 import type { HouseInterface } from "@/interfaces/HouseInterface";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import CharacterName from "./CharacterName";
 // import { Link } from "react-router";
 
 type HouseCardProps = {
@@ -8,7 +9,7 @@ type HouseCardProps = {
 
 function HouseCard({ house }: HouseCardProps) {
   const houseId = house.url.split("/").pop();
-  
+
   return (
     <a
       href={`/house/${houseId}`}
@@ -39,12 +40,13 @@ function HouseCard({ house }: HouseCardProps) {
           )}
           {house.currentLord && (
             <p>
-              <b>Current Lord:</b> {house.currentLord.split("/").pop()}
+              <b>Current Lord:</b>{" "}
+              <CharacterName link={house.currentLord} isLink={false} />
             </p>
           )}
           {house.heir && (
             <p>
-              <b>Heir:</b> {house.heir.split("/").pop()}
+              <CharacterName link={house.heir} isLink={false} />{" "}
             </p>
           )}
           {house.founded && (

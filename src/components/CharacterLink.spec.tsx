@@ -1,18 +1,18 @@
 import { expect, test } from "vitest";
 import { render } from "vitest-browser-react";
-import CharacterLink from "./CharacterLink";
+import CharacterName from "./CharacterName";
 
 test("Character Link component displays proper text", async () => {
   const petyrLink = "https://www.anapioficeandfire.com/api/characters/823";
 
-  const { getByText } = await render(<CharacterLink link={petyrLink} />);
+  const { getByText } = await render(<CharacterName link={petyrLink} />);
 
   await expect.element(getByText("Petyr Baelish")).toBeInTheDocument();
 });
 
-test("CharacterLink without name", async () => {
+test("CharacterName without name", async () => {
   const unnamedLink = "https://www.anapioficeandfire.com/api/characters/3";
-  const { getByText } = await render(<CharacterLink link={unnamedLink} />);
+  const { getByText } = await render(<CharacterName link={unnamedLink} />);
 
   await expect.element(getByText("Unnamed Character #3")).toBeInTheDocument();
 });

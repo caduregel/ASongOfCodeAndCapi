@@ -1,10 +1,10 @@
 import { fetcher } from "@/lib/swrFetcher";
-import { useParams, Link } from "react-router";
+import { useParams } from "react-router";
 import useSWR from "swr";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import CharacterLink from "@/components/CharacterLink";
+import CharacterName from "@/components/CharacterName";
 
 function HousePage() {
   const { houseid } = useParams();
@@ -20,8 +20,6 @@ function HousePage() {
 
   if (isLoading) return <div className="p-6">Loading...</div>;
   if (error || !house) return <div className="p-6">Failed to load house</div>;
-
-  const getIdFromUrl = (url: string) => url.split("/").pop();
 
   return (
     <div className="max-w-5xl mx-auto p-6 space-y-6">
@@ -78,17 +76,17 @@ function HousePage() {
         <CardContent className="space-y-2 text-sm">
           {house.currentLord && (
             <p>
-              <b>Current Lord:</b> <CharacterLink link={house.currentLord} />
+              <b>Current Lord:</b> <CharacterName link={house.currentLord} />
             </p>
           )}
           {house.heir && (
             <p>
-              <b>Heir:</b> <CharacterLink link={house.heir} />
+              <b>Heir:</b> <CharacterName link={house.heir} />
             </p>
           )}
           {house.overlord && (
             <p>
-              <b>Overlord:</b> <CharacterLink link={house.overlord} />
+              <b>Overlord:</b> <CharacterName link={house.overlord} />
             </p>
           )}
         </CardContent>
@@ -103,11 +101,12 @@ function HousePage() {
           <CardContent>
             <div className="flex flex-wrap gap-2">
               {house.swornMembers.slice(0, 12).map((member: string) => {
-                console.log(member)
-                return(
-                <Badge variant="outline">
-                  <CharacterLink link={member} />
-                </Badge>)
+                console.log(member);
+                return (
+                  <Badge variant="outline">
+                    <CharacterName link={member} />
+                  </Badge>
+                );
               })}
             </div>
 
