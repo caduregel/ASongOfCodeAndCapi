@@ -20,6 +20,7 @@ const initialState: ThemeProviderState = {
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
+// Context provider for managing and providing theme (dark, light, system) across the app, taken from shadcn/ui docs
 export function ThemeProvider({
   children,
   defaultTheme = "system",

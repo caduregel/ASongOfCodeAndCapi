@@ -2,7 +2,7 @@ import HouseCard from "@/components/HouseCard";
 import HousesSkeleton from "@/components/skeletonLayouts/HousesSkeleton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { HouseInterface } from "@/interfaces/HouseInterface";
+import type { IHouse } from "@/interfaces/HouseInterface";
 import { fetcher } from "@/lib/swrFetcher";
 import { useState } from "react";
 import useSWR from "swr";
@@ -42,7 +42,7 @@ function LandingPage() {
           ) : (
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {data?.map((item: HouseInterface) => (
+                {data?.map((item: IHouse) => (
                   <HouseCard key={item.url} house={item} />
                 ))}
               </div>

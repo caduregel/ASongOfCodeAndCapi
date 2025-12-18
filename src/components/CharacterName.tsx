@@ -3,6 +3,9 @@ import { getIdFromUrl } from "@/lib/utils";
 // import { getIdFromUrl } from "@/lib/utils";
 import useSWR from "swr";
 
+
+// A component for displaying a character's name, optionally as a link to their detail page
+// Used for components that display lists of characters, but only have access to the character API URL
 type CharacterNameProps = {
   link: string;
   isLink?: boolean;

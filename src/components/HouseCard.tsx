@@ -1,12 +1,13 @@
-import type { HouseInterface } from "@/interfaces/HouseInterface";
+import type { IHouse } from "@/interfaces/HouseInterface";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import CharacterName from "./CharacterName";
 // import { Link } from "react-router";
 
 type HouseCardProps = {
-  house: HouseInterface;
+  house: IHouse;
 };
 
+// Displays a house based on the HouseInterface data, gotten from anApiOfIceAndFire
 function HouseCard({ house }: HouseCardProps) {
   const houseId = house.url.split("/").pop();
 

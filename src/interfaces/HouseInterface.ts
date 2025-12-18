@@ -1,4 +1,4 @@
-export interface HouseInterface {
+export interface IHouse {
     url: string;
     name: string;
     region: string | null;

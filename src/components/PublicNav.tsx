@@ -3,6 +3,8 @@ import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 import { ModeToggle } from "./ui/modeToggle";
 
+// Navigation bar for public pages with links to Houses and Characters, and a mode toggle
+// Deze heb ik genomen van een oud project van mij, zie studieflows.net
 function PublicNav() {
   const [scrolled, setScrolled] = useState(false);
 
