@@ -9,6 +9,7 @@ import { playwright } from '@vitest/browser-playwright'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   test: {
+    // reporters: ["verbose"],
     browser: {
       provider: playwright(),
       enabled: true,
