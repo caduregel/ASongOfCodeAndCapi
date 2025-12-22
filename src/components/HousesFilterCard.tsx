@@ -1,5 +1,3 @@
-// components/HousesFilterCard.tsx
-
 import {
   Card,
   CardContent,

@@ -26,7 +26,6 @@ function LandingPage() {
   const handleNext = async () => setPage((prev) => prev + 1);
 
   const handlePrev = () => setPage((prev) => Math.max(prev - 1, 1));
-  console.log(query);
   return (
     <>
       <div className="grid grid-cols-4 w-full gap-5 ">
