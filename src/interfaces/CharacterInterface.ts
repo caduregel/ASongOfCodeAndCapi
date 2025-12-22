@@ -21,3 +21,12 @@ export interface ICharacter {
   tvSeries: string[];
   playedBy: string[];
 }
+
+export interface CharactersFilterValues {
+  name?: string;
+  gender?: string;
+  culture?: string;
+  born?: string;
+  died?: string;
+  isAlive?: boolean;
+}
