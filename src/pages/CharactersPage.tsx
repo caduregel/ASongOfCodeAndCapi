@@ -1,4 +1,5 @@
 import CharacterCard from "@/components/CharacterCard";
+import CharactersSkeleton from "@/components/skeletonLayouts/CharactersSkeleton";
 // import CharactersSkeleton from "@/components/skeletonLayouts/CharactersSkeleton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,9 +41,8 @@ function CharactersPage() {
       <div className="col-start-2 col-end-5">
         {error ? (
           <div>Error loading characters</div>
-        ) : isLoading ? (
-        //   <CharactersSkeleton />
-            <div>Loading characters...</div>
+        ) : !isLoading ? (
+          <CharactersSkeleton />
         ) : (
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

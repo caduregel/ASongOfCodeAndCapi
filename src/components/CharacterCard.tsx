@@ -17,7 +17,7 @@ function CharacterCard({ character }: Props) {
       href={`/character/${characterId}`}
       className="hover:scale-[1.05] transition-transform"
     >
-      <Card>
+      <Card className="min-h-40">
         <CardHeader>
           <CardTitle className="text-lg">{displayName}</CardTitle>
         </CardHeader>

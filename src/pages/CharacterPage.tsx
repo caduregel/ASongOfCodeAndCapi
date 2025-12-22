@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import CharacterName from "@/components/CharacterName";
 import HouseName from "@/components/HouseName";
+import HouseSkeleton from "@/components/skeletonLayouts/HouseSkeleton";
 
 function CharacterPage() {
   const { characterid } = useParams();
@@ -18,13 +19,14 @@ function CharacterPage() {
     fetcher
   );
 
-  if (isLoading) return <div className="p-6">Loading...</div>;
+  if (isLoading) return <HouseSkeleton />
   if (error || !character)
     return <div className="p-6">Failed to load character</div>;
 
   const isDead = Boolean(character.died);
   const displayName =
     character.name || character.aliases?.[0] || "Unknown character";
+
 
   return (
     <div className="max-w-5xl mx-auto p-6 space-y-6">

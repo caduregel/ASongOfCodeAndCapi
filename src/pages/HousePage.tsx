@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import CharacterName from "@/components/CharacterName";
+import HouseSkeleton from "@/components/skeletonLayouts/HouseSkeleton";
 
 function HousePage() {
   const { houseid } = useParams();
@@ -18,7 +19,7 @@ function HousePage() {
     fetcher
   );
 
-  if (isLoading) return <div className="p-6">Loading...</div>;
+  if (isLoading) return <HouseSkeleton />;
   if (error || !house) return <div className="p-6">Failed to load house</div>;
 
   return (
