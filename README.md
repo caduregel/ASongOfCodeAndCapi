@@ -1,6 +1,6 @@
 # A Song of Code and Capi
 
-A Song of Code and Capi is een interface gebouwed boven op An API of Ice And Fire: een API die gegevens van personages, huizen, boeken uit de wereld van Game of Thrones: A Song of Ice and Fire. Het doel van dit project was om een zo simpel mogelijk UI te maken waarmee deze api te verkennen.
+A Song of Code and Capi is een interface gebouwed boven op An API of Ice And Fire: een API die gegevens van personages, huizen, boeken uit de wereld van Game of Thrones: A Song of Ice and Fire. Het doel van dit project was om een zo simpel mogelijk UI te maken waarmee deze api te verkennen is.
 
 Er is een live [vercel](https://a-song-of-code-and-capi.vercel.app/) demo beschikbaar
 
@@ -8,10 +8,10 @@ Er is een live [vercel](https://a-song-of-code-and-capi.vercel.app/) demo beschi
 
 - [Landing Page/Houses Page](https://a-song-of-code-and-capi.vercel.app/)
 
-  - Pagina om door huizen heen te filteren, is ook gelijk de landing page van de site.
+  - Pagina om door huizen te filteren, is ook de landing page van de site.
 
 - [Characters page](https://a-song-of-code-and-capi.vercel.app/characters)
-  - Pagina om door personages heen te filteren.
+  - Pagina om door personages te filteren.
 
 ## Leuke features
 
@@ -22,7 +22,7 @@ Er is een live [vercel](https://a-song-of-code-and-capi.vercel.app/) demo beschi
 ## Limitations
 
 - Precies, hoofdletter gevoelige filters vanwege API limitaties
-    - Mogelijk oplossing: Iets van meer paginas cachen in de achtergrond, en deze gebruik in een zelf gemaakte frontend fuzzy searcher
+    - Mogelijk oplossing: meer paginas hun data cachen in de achtergrond, en deze gebruiken in een zelf gemaakte frontend fuzzy searcher
 
 ## Technische details
 
@@ -31,7 +31,8 @@ Het doel van dit project was om iets te maken dat:
 - Compleet is
 - Niet te veel tijd aan besteed hoeft te worden
 - Nog leuk/interessant genoeg is voor toekomstig uitbreidings ideeën
-  Hiermee in gedachten zijn de volgende keuzes gemaakt:
+
+Hiermee in gedachten zijn de volgende keuzes gemaakt:
 
 ### Technologie kezes
 
@@ -41,11 +42,11 @@ Het doel van dit project was om iets te maken dat:
 
 - React binnen de [vite](https://vite.dev/) framework
 
-  - Hierbinnen heb ik de meeste ervaring in projecten maken, om zo makkelijk en snel mogelijk van start te gaan is dus van deze framework gebruikt.
+  - Hierbinnen heb ik de meeste ervaring in projecten maken, om zo makkelijk en snel mogelijk van start te gaan is dus deze framework gebruikt.
 
 - [ShadCNUI](https://ui.shadcn.com/) / [TailwindCSS](https://tailwindcss.com/)
 
-  - Net als bij Vite framework, heb ik in eerdere projecten (bv. [studyflows](https://studyflows.net/)) gebruikt van TailwindCSS en de ShadCN component library. Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoeft er niet veel nagedacht worden over styling
+  - Net als bij Vite framework, heb ik in eerdere projecten (bv. [studyflows](https://studyflows.net/)) TailwindCSS en de ShadCN component library gebruikt. Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoeft er niet veel nagedacht worden over styling
 
 - [Vitest](https://vitest.dev/guide/) component testing
   - Dit heb ik nog niet eerder gebruikt, hoewel ik wel eerder Unit testing, en E2E testing heb gedaan waar ik Jest heb gebruikt, leek het mij leuk om met iets nieuws een beetje te experimenteren
