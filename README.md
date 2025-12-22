@@ -2,6 +2,8 @@
 
 A Song of Code and Capi is een interface gebouwed boven op An API of Ice And Fire: een API die gegevens van personages, huizen, boeken uit de wereld van Game of Thrones: A Song of Ice and Fire. Het doel van dit project was om een zo simpel mogelijk UI te maken waarmee deze api te verkennen.
 
+Er is een live [vercel](https://a-song-of-code-and-capi.vercel.app/) demo beschikbaar
+
 ## Paginas
 
 * [Landing Page/Houses Page](https://a-song-of-code-and-capi.vercel.app/)
