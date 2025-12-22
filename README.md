@@ -39,7 +39,7 @@ Het doel van dit project was om iets te maken dat:
 
   - Na het exploren van veel mogelijk API's om een project omheen te bouwen, sprak deze mij het meeste aan omdat de Game of Thrones series, een van mijn favoriete series is.
 
-- React binnen de [vite](https://vitest.dev/guide/) framework
+- React binnen de [vite](https://vite.dev/) framework
 
   - Hierbinnen heb ik de meeste ervaring in projecten maken, om zo makkelijk en snel mogelijk van start te gaan is dus van deze framework gebruikt.
 
@@ -47,7 +47,7 @@ Het doel van dit project was om iets te maken dat:
 
   - Net als bij Vite framework, heb ik in eerdere projecten (bv. [studyflows](https://studyflows.net/)) gebruikt van TailwindCSS en de ShadCN component library. Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoeft er niet veel nagedacht worden over styling
 
-- Vitest component testing
+- [Vitest](https://vitest.dev/guide/) component testing
   - Dit heb ik nog niet eerder gebruikt, hoewel ik wel eerder Unit testing, en E2E testing heb gedaan waar ik Jest heb gebruikt, leek het mij leuk om met iets nieuws een beetje te experimenteren
 
 ### Project Structuur
