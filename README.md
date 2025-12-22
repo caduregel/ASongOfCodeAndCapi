@@ -4,10 +4,10 @@ A Song of Code and Capi is een interface gebouwed boven op An API of Ice And Fir
 
 ## Paginas
 
-* (Landing Page/Houses Page)[https://a-song-of-code-and-capi.vercel.app/]
+* [Landing Page/Houses Page](https://a-song-of-code-and-capi.vercel.app/)
     * Pagina om door huizen heen te filteren, is ook gelijk de landing page van de site.
 
-* (Characters page)[https://a-song-of-code-and-capi.vercel.app/characters]
+* [Characters page](https://a-song-of-code-and-capi.vercel.app/characters)
     * Pagina om door personages heen te filteren.
 
 ## Leuke features
@@ -30,14 +30,14 @@ Hiermee in gedachten zijn de volgende keuzes gemaakt:
 
 ### Technologie kezes
 
-* (An Api of Ice and Fire)[https://www.anapioficeandfire.com/]
+* [An Api of Ice and Fire](https://www.anapioficeandfire.com/)
     * Na het exploren van veel mogelijk API's om een project omheen te bouwen, sprak deze mij het meeste aan omdat de Game of Thrones series, een van mijn favoriete series is.
 
 * React binnen de vite framework
     * Hierbinnen heb ik de meeste ervaring in projecten maken, om zo makkelijk en snel mogelijk van start te gaan is dus van deze framework gebruk gemaakt
 
 * ShadCN UI/TailwindCSS
-    * Net als bij Vite framework, heb ik in eerdere projecten gebruik gemaakt van TailwindCSS en de ShadCN component library [(studyflows)\[https://studyflows.net/\]](https://studyflows.net/). Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoefd er niet veel nagedacht worden over styling
+    * Net als bij Vite framework, heb ik in eerdere projecten gebruik gemaakt van TailwindCSS en de ShadCN component library [(studyflows)](https://studyflows.net/). Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoefd er niet veel nagedacht worden over styling
 
 * Vitest component testing
     * Hier heb ik nog geen gebruik van gemaakt, hoewel ik wel eerder Unit testing, en E2E testing heb gedaan waar ik gebruik heb gemaakt van Jest, leek het mij leuk om met iets nieuws een beetje te experimenteren
