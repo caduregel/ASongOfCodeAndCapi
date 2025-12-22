@@ -41,14 +41,14 @@ Het doel van dit project was om iets te maken dat:
 
 - React binnen de [vite](https://vitest.dev/guide/) framework
 
-  - Hierbinnen heb ik de meeste ervaring in projecten maken, om zo makkelijk en snel mogelijk van start te gaan is dus van deze framework gebruik gemaakt
+  - Hierbinnen heb ik de meeste ervaring in projecten maken, om zo makkelijk en snel mogelijk van start te gaan is dus van deze framework gebruikt.
 
 - [ShadCNUI](https://ui.shadcn.com/) / [TailwindCSS](https://tailwindcss.com/)
 
-  - Net als bij Vite framework, heb ik in eerdere projecten gebruik gemaakt van TailwindCSS en de ShadCN component library [(studyflows)](https://studyflows.net/). Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoefd er niet veel nagedacht worden over styling
+  - Net als bij Vite framework, heb ik in eerdere projecten (bv. [studyflows](https://studyflows.net/)) gebruikt van TailwindCSS en de ShadCN component library. Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoeft er niet veel nagedacht worden over styling
 
 - Vitest component testing
-  - Hier heb ik nog geen gebruik van gemaakt, hoewel ik wel eerder Unit testing, en E2E testing heb gedaan waar ik gebruik heb gemaakt van Jest, leek het mij leuk om met iets nieuws een beetje te experimenteren
+  - Dit heb ik nog niet eerder gebruikt, hoewel ik wel eerder Unit testing, en E2E testing heb gedaan waar ik Jest heb gebruikt, leek het mij leuk om met iets nieuws een beetje te experimenteren
 
 ### Project Structuur
 
@@ -80,4 +80,4 @@ Het doel van dit project was om iets te maken dat:
 1. Clone deze github Repo
 2. Run `npm install` binnen deze project directory
 3. Run `npm run dev` binnen deze project directory
-4. Als het goed is kan je nu zien op welke port er een development server gestart is
+4. De development server draait nu en is bereikbaar op de getoonde poort.
