@@ -1,9 +1,9 @@
-import App from "./App";
 import CharactersPage from "./pages/CharactersPage";
 import ErrorPage from "./pages/ErrorPage";
 import HousePage from "./pages/HousePage";
 import LandingPage from "./pages/LandingPage";
 import CharacterPage from "./pages/CharacterPage";
+import App from "./App";
 
 const routes = [
   {
