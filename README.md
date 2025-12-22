@@ -6,60 +6,74 @@ Er is een live [vercel](https://a-song-of-code-and-capi.vercel.app/) demo beschi
 
 ## Paginas
 
-* [Landing Page/Houses Page](https://a-song-of-code-and-capi.vercel.app/)
-    * Pagina om door huizen heen te filteren, is ook gelijk de landing page van de site.
+- [Landing Page/Houses Page](https://a-song-of-code-and-capi.vercel.app/)
 
-* [Characters page](https://a-song-of-code-and-capi.vercel.app/characters)
-    * Pagina om door personages heen te filteren.
+  - Pagina om door huizen heen te filteren, is ook gelijk de landing page van de site.
+
+- [Characters page](https://a-song-of-code-and-capi.vercel.app/characters)
+  - Pagina om door personages heen te filteren.
 
 ## Leuke features
 
-* Filters voor characters en Houses pagina
-* Darkmode
-* Skeleton Loaders
+- Filters voor characters en Houses pagina
+- Darkmode
+- Skeleton Loaders
 
 ## Limitations
 
-* Precies, hoofdletter gevoelige filters vanwege API limitaties
+- Precies, hoofdletter gevoelige filters vanwege API limitaties
+    - Mogelijk oplossing: Iets van meer paginas cachen in de achtergrond, en deze gebruik in een zelf gemaakte frontend fuzzy searcher
 
 ## Technische details
 
 Het doel van dit project was om iets te maken dat:
-* Compleet is
-* Niet te veel tijd aan besteed hoeft te worden
-* Nog leuk/interessant genoeg is voor toekomstig uitbreidings ideeën
-Hiermee in gedachten zijn de volgende keuzes gemaakt:
+
+- Compleet is
+- Niet te veel tijd aan besteed hoeft te worden
+- Nog leuk/interessant genoeg is voor toekomstig uitbreidings ideeën
+  Hiermee in gedachten zijn de volgende keuzes gemaakt:
 
 ### Technologie kezes
 
-* [An Api of Ice and Fire](https://www.anapioficeandfire.com/)
-    * Na het exploren van veel mogelijk API's om een project omheen te bouwen, sprak deze mij het meeste aan omdat de Game of Thrones series, een van mijn favoriete series is.
+- [An Api of Ice and Fire](https://www.anapioficeandfire.com/)
 
-* React binnen de vite framework
-    * Hierbinnen heb ik de meeste ervaring in projecten maken, om zo makkelijk en snel mogelijk van start te gaan is dus van deze framework gebruk gemaakt
+  - Na het exploren van veel mogelijk API's om een project omheen te bouwen, sprak deze mij het meeste aan omdat de Game of Thrones series, een van mijn favoriete series is.
 
-* ShadCN UI/TailwindCSS
-    * Net als bij Vite framework, heb ik in eerdere projecten gebruik gemaakt van TailwindCSS en de ShadCN component library [(studyflows)](https://studyflows.net/). Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoefd er niet veel nagedacht worden over styling
+- React binnen de [vite](https://vitest.dev/guide/) framework
 
-* Vitest component testing
-    * Hier heb ik nog geen gebruik van gemaakt, hoewel ik wel eerder Unit testing, en E2E testing heb gedaan waar ik gebruik heb gemaakt van Jest, leek het mij leuk om met iets nieuws een beetje te experimenteren
+  - Hierbinnen heb ik de meeste ervaring in projecten maken, om zo makkelijk en snel mogelijk van start te gaan is dus van deze framework gebruik gemaakt
+
+- [ShadCNUI](https://ui.shadcn.com/) / [TailwindCSS](https://tailwindcss.com/)
+
+  - Net als bij Vite framework, heb ik in eerdere projecten gebruik gemaakt van TailwindCSS en de ShadCN component library [(studyflows)](https://studyflows.net/). Hierdoor kon ik gemakkelijk components van oude projecten over kopiëren (Zoals de navbar die genomen is van studyflows), en hoefd er niet veel nagedacht worden over styling
+
+- Vitest component testing
+  - Hier heb ik nog geen gebruik van gemaakt, hoewel ik wel eerder Unit testing, en E2E testing heb gedaan waar ik gebruik heb gemaakt van Jest, leek het mij leuk om met iets nieuws een beetje te experimenteren
 
 ### Project Structuur
 
-* pages/ 
-    * Bevat de routable pagina’s van de applicatie:
+- `pages/`  
+  Bevat de routable pagina’s van de applicatie:
 
-* components/
-    * Alle herbruikbare components
-* components/skeletonLayotus
-    * Bevat skeleton loader components voor paginas
-* components/ui
-    * Directory waar UI components van ShadCN geinstalleerd wordne 
+  - `index.tsx` → Landing/Houses Page
+  - `characters.tsx` → Characters Page
 
-* interfaces/
-    * Typescript interfaces
-* lib/
-    * Utility functions. Fetcher function voor SWR
+- `components/`  
+  Alle herbruikbare componenten:
+
+  - `HouseCard.tsx`, `CharacterCard.tsx`, `HousesFilterCard.tsx`, etc.
+
+- `components/skeletonLayouts/`  
+  Skeleton loader components voor een betere UX tijdens data fetches.
+
+- `components/ui/`  
+  UI componenten gebaseerd op ShadCN/TailwindCSS, herbruikbaar door de hele app.
+
+- `interfaces/`  
+  TypeScript interfaces voor huizen en personages.
+
+- `lib/`  
+  Utility functies zoals `swrFetcher` en `buildQueryString`.
 
 ## Installatie
 
