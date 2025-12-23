@@ -22,7 +22,15 @@ Er is een live [vercel](https://a-song-of-code-and-capi.vercel.app/) demo beschi
 ## Limitations
 
 - Precies, hoofdletter gevoelige filters vanwege API limitaties
-    - Mogelijk oplossing: meer paginas hun data cachen in de achtergrond, en deze gebruiken in een zelf gemaakte frontend fuzzy searcher
+
+Om dit te fixen heb ik een pull request gemaakt op de API die gebruikt word in dit project:
+
+https://github.com/joakimskoog/AnApiOfIceAndFire/pull/274
+
+Als deze PR request geaccepteerd word, dan zal deze limitatie opgelost worden. Mischien dat ik dit project in de tussentijd zelf host met de fix, dan werkt het meteen. Dan zou ik dit project hosten:
+
+https://github.com/caduregel/AnApiOfIceAndFireExtended
+
 
 ## Technische details
 
